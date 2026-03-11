@@ -6,7 +6,7 @@ function App() {
   let items = ["boston", "new york", "chicago", "los angelos"];
   return (
     <>
-      <Message  items={items} heading='cities' />
+      <Message  items={items} heading='cities' onSelectItem={(item) => console.log(item)} />
     </>
   )
 }

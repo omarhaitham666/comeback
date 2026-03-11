@@ -1,11 +1,13 @@
 import { useState } from "react";
-
-function Message() {
-  let items = ["boston", "new york", "chicago", "los angelos"];
+interface MessageProps{
+  items:string[];
+  heading:string;
+}
+function Message({items,heading}:MessageProps) {
   const[selectedIndex,setSelectedIndex] = useState(0);
   return (
     <>
-      <h1>lists </h1>
+      <h1>{heading}</h1>
       <ul className='list-group'>
         {items.map((item,index) => (
           <li className={selectedIndex===index?"list-group-item active":"list-group-item"} key={item} onClick={()=>{setSelectedIndex(index);}}>

@@ -1,12 +1,12 @@
 import './App.css'
-import Message from './message'
+import Message from './Message'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-
+  let items = ["boston", "new york", "chicago", "los angelos"];
   return (
     <>
-      <Message />
+      <Message  items={items} heading='cities' />
     </>
   )
 }
